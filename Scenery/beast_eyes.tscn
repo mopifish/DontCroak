@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Scenery_Pieces/beast_eyes.png" type="Texture" id=1]
+
+[node name="beast_eyes" type="Sprite"]
+texture = ExtResource( 1 )

@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Rooms/Room.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Rooms/walls/open_wall.png" type="Texture" id=2]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Rooms/Forward walls/collapsed_door.png" type="Texture" id=3]
+[ext_resource path="res://Enemies/Louse.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenery/rat_bones.tscn" type="PackedScene" id=5]
+
+[node name="Room2" instance=ExtResource( 1 )]
+left_door = "res://Rooms/Floor1/Room3.tscn"
+right_door = "res://Rooms/Floor1/Room13.tscn"
+back_door = "res://Rooms/Floor1/Room1.tscn"
+
+[node name="FrontWall" parent="." index="1"]
+texture = ExtResource( 3 )
+
+[node name="RightWall" parent="." index="2"]
+texture = ExtResource( 2 )
+
+[node name="LeftWall" parent="." index="3"]
+texture = ExtResource( 2 )
+
+[node name="Louse" parent="Monsters" index="2" instance=ExtResource( 4 )]
+position = Vector2( 0, 4 )
+distracted = true
+
+[node name="AnimationPlayer" parent="Monsters/Louse" index="1"]
+autoplay = "Eat"
+
+[node name="rat_bones" parent="Scenery" index="0" instance=ExtResource( 5 )]
+position = Vector2( 1, 14 )
+
+[editable path="Monsters/Louse"]

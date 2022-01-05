@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Rooms/Room.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Rooms/walls/open_wall.png" type="Texture" id=2]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Rooms/Forward walls/open_door1.png" type="Texture" id=3]
+[ext_resource path="res://Scenery/crystal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenery/skull_bones.tscn" type="PackedScene" id=5]
+
+[node name="Room13" instance=ExtResource( 1 )]
+left_door = "res://Rooms/Floor1/Room2.tscn"
+right_door = "res://Rooms/Floor1/Room16.tscn"
+front_door = "res://Rooms/Floor1/Room14.tscn"
+
+[node name="FrontWall" parent="." index="1"]
+texture = ExtResource( 3 )
+
+[node name="RightWall" parent="." index="2"]
+texture = ExtResource( 2 )
+
+[node name="LeftWall" parent="." index="3"]
+texture = ExtResource( 2 )
+
+[node name="skull_bones" parent="LeftWall" index="0" instance=ExtResource( 5 )]
+position = Vector2( 27, 26 )
+
+[node name="crystal" parent="LeftWall" index="1" instance=ExtResource( 4 )]
+position = Vector2( 10, 16 )

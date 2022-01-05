@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Rooms/Room.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Rooms/Forward walls/abandoned_mine1.png" type="Texture" id=2]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Rooms/walls/wall.png" type="Texture" id=3]
+[ext_resource path="res://Enemies/Armor.tscn" type="PackedScene" id=4]
+
+[node name="Room22" instance=ExtResource( 1 )]
+front_door = "res://Rooms/SecretWin.tscn"
+back_door = "res://Rooms/Floor1/Room20.tscn"
+is_dark = true
+
+[node name="FrontWall" parent="." index="1"]
+texture = ExtResource( 2 )
+
+[node name="RightWall" parent="." index="2"]
+texture = ExtResource( 3 )
+
+[node name="LeftWall" parent="." index="3"]
+texture = ExtResource( 3 )
+
+[node name="Armor" parent="Monsters" index="2" instance=ExtResource( 4 )]
+position = Vector2( -8, 6 )
+health = 30.0
+stagger = 5.0
+attack = 2.0
+AttackDelay = 5.0
+score_increase = 10
+
+[node name="Armor2" parent="Monsters" index="3" instance=ExtResource( 4 )]
+position = Vector2( 8, 6 )
+health = 30.0
+stagger = 4.0
+attack = 1.0
+AttackDelay = 4.0
+score_increase = 5

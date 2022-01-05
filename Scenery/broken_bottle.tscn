@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Scenery_Pieces/broken_bottle.png" type="Texture" id=1]
+
+[node name="broken_bottle" type="Sprite"]
+texture = ExtResource( 1 )

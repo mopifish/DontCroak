@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Rooms/Room.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Rooms/Forward walls/open_door1.png" type="Texture" id=2]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Rooms/walls/wall.png" type="Texture" id=3]
+[ext_resource path="res://Enemies/Mob.tscn" type="PackedScene" id=4]
+
+[node name="Room7" instance=ExtResource( 1 )]
+front_door = "res://Rooms/Tutorial/Room8.tscn"
+back_door = "res://Rooms/Tutorial/Room6.tscn"
+
+[node name="FrontWall" parent="." index="1"]
+texture = ExtResource( 2 )
+
+[node name="RightWall" parent="." index="2"]
+texture = ExtResource( 3 )
+
+[node name="LeftWall" parent="." index="3"]
+texture = ExtResource( 3 )
+
+[node name="Mob" parent="Monsters" index="2" instance=ExtResource( 4 )]
+position = Vector2( 0, 5 )
+health = 10.0
+stagger = 7.0
+score_increase = 10

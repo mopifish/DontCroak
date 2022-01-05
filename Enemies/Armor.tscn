@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Monsters/possesed_armor.png" type="Texture" id=1]
+[ext_resource path="res://Enemies/Enemy.tscn" type="PackedScene" id=2]
+
+[node name="Armor" instance=ExtResource( 2 )]
+health = 10.0
+AttackDelay = 3.0
+
+[node name="Sprite" parent="." index="0"]
+rotation = 0.0
+texture = ExtResource( 1 )
+offset = Vector2( -2, 0 )
+hframes = 3
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Resting"

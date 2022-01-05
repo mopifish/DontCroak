@@ -1,0 +1,181 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/UI/Pixel.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Rooms/Room.gd" type="Script" id=2]
+[ext_resource path="res://GameScripts/Monsters.gd" type="Script" id=3]
+[ext_resource path="res://Usables/Usables.gd" type="Script" id=4]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/UI/light_texture.png" type="Texture" id=5]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/UI/dark_texture.png" type="Texture" id=6]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Rooms/Floors/blank_floor.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 6
+extra_spacing_bottom = -2
+extra_spacing_space = -4
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Flicker"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("DarkTexture:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.176471 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("DarkTexture:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Resting"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("DarkTexture:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.996078 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("DarkTexture:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.996078 ) ]
+}
+
+[node name="Room" type="Node2D"]
+position = Vector2( 23, 16 )
+script = ExtResource( 2 )
+
+[node name="Floor" type="Sprite" parent="."]
+position = Vector2( -19, -13 )
+texture = ExtResource( 7 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="FrontWall" type="Sprite" parent="."]
+position = Vector2( -12, -13 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RightWall" type="Sprite" parent="."]
+position = Vector2( -19, -12 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LeftWall" type="Sprite" parent="."]
+position = Vector2( 18, -12 )
+scale = Vector2( -1, 1 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Usables" type="Node2D" parent="."]
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": "Things other than items that can be interacted with
+
+"
+}
+
+[node name="Items" type="Node2D" parent="."]
+__meta__ = {
+"_editor_description_": "Things that can be picked up and used
+"
+}
+
+[node name="slot_1" type="Position2D" parent="Items"]
+position = Vector2( -8, 6 )
+
+[node name="slot_2" type="Position2D" parent="Items"]
+position = Vector2( -11, 13 )
+
+[node name="slot_3" type="Position2D" parent="Items"]
+position = Vector2( 8, 6 )
+
+[node name="slot_4" type="Position2D" parent="Items"]
+position = Vector2( 10, 13 )
+
+[node name="Monsters" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="pos_0" type="Position2D" parent="Monsters"]
+position = Vector2( 0, 5 )
+
+[node name="Tween" type="Tween" parent="Monsters"]
+
+[node name="Scenery" type="Node2D" parent="."]
+
+[node name="LightTexture" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.862745 )
+position = Vector2( -1, 4 )
+texture = ExtResource( 5 )
+offset = Vector2( 0.5, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="DarkTexture" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.996078 )
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -1, 4 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = -18.0
+margin_top = -10.0
+margin_right = 17.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Resting"
+anims/Flicker = SubResource( 2 )
+anims/Resting = SubResource( 3 )

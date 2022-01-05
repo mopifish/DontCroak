@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Rooms/Room.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Rooms/walls/wall.png" type="Texture" id=2]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Rooms/Forward walls/wall1.png" type="Texture" id=3]
+[ext_resource path="res://Items/Buggy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Items/Meat.tscn" type="PackedScene" id=5]
+
+[node name="Room14-Cell" instance=ExtResource( 1 )]
+back_door = "res://Rooms/Floor1/Room14.tscn"
+
+[node name="FrontWall" parent="." index="1"]
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="RightWall" parent="." index="2"]
+texture = ExtResource( 2 )
+
+[node name="LeftWall" parent="." index="3"]
+texture = ExtResource( 2 )
+
+[node name="Meat" parent="Items" index="4" instance=ExtResource( 5 )]
+position = Vector2( -8, 6 )
+
+[node name="Buggy" parent="Items" index="5" instance=ExtResource( 4 )]
+position = Vector2( 10, 13 )

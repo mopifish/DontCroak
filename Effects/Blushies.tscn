@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Monsters/blushies.png" type="Texture" id=1]
+[ext_resource path="res://Effects/Blushies.gd" type="Script" id=2]
+
+[node name="Blushies" type="Sprite"]
+visible = false
+texture = ExtResource( 1 )
+script = ExtResource( 2 )

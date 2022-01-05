@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Rooms/Room.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Usables/SecretWall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Rooms/walls/open_wall.png" type="Texture" id=3]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Rooms/walls/wall.png" type="Texture" id=4]
+[ext_resource path="res://Usables/Chest.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Items/Key.tscn" type="PackedScene" id=6]
+
+[node name="Room21" instance=ExtResource( 1 )]
+right_door = "res://Rooms/Floor1/Room20.tscn"
+front_door = "res://Rooms/Floor1/Room23.tscn"
+is_dark = true
+
+[node name="RightWall" parent="." index="2"]
+texture = ExtResource( 3 )
+
+[node name="LeftWall" parent="." index="3"]
+texture = ExtResource( 4 )
+
+[node name="SecretWall" parent="Usables" index="0" instance=ExtResource( 2 )]
+position = Vector2( -1, -4 )
+
+[node name="Chest" parent="Usables" index="1" instance=ExtResource( 5 )]
+position = Vector2( 0, 5 )
+score_increase = 5
+contained_item = "res://Weapons/Hammer.tscn"
+
+[node name="Key" parent="Items" index="4" instance=ExtResource( 6 )]
+position = Vector2( -11, 13 )

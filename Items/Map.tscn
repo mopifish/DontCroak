@@ -1,0 +1,457 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Items/Item.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Items/Map.png" type="Texture" id=2]
+[ext_resource path="res://Items/Map.gd" type="Script" id=3]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Map/room.png" type="Texture" id=4]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Map/current_room.png" type="Texture" id=5]
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Map/connector.png" type="Texture" id=6]
+
+[node name="Map" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+score_increase = 0
+Class = ""
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="4"]
+
+[node name="Level1" type="ColorRect" parent="CanvasLayer" index="0"]
+visible = false
+show_behind_parent = true
+margin_left = 4.0
+margin_top = 5.0
+margin_right = 41.0
+margin_bottom = 35.0
+color = Color( 0.101961, 0.0784314, 0.0745098, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="current_room" type="Sprite" parent="CanvasLayer/Level1" index="0"]
+position = Vector2( 18, 27 )
+z_index = 1
+texture = ExtResource( 5 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room0" type="Sprite" parent="CanvasLayer/Level1" index="1"]
+position = Vector2( 18, 27 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room1" type="Sprite" parent="CanvasLayer/Level1" index="2"]
+visible = false
+position = Vector2( 18, 23 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room1" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room2" type="Sprite" parent="CanvasLayer/Level1" index="3"]
+visible = false
+position = Vector2( 18, 19 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room2" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room3" type="Sprite" parent="CanvasLayer/Level1" index="4"]
+visible = false
+position = Vector2( 14, 19 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room3" index="0"]
+position = Vector2( 2, 0 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room4" type="Sprite" parent="CanvasLayer/Level1" index="5"]
+visible = false
+position = Vector2( 10, 19 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room4" index="0"]
+position = Vector2( 2, 0 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room5" type="Sprite" parent="CanvasLayer/Level1" index="6"]
+visible = false
+position = Vector2( 14, 15 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room5" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room5-Cell" type="Sprite" parent="CanvasLayer/Level1" index="7"]
+visible = false
+position = Vector2( 14, 13 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room6" type="Sprite" parent="CanvasLayer/Level1" index="8"]
+visible = false
+position = Vector2( 10, 15 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room6" index="0"]
+position = Vector2( 2, 0 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector2" type="Sprite" parent="CanvasLayer/Level1/Room6" index="1"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room6-Cell" type="Sprite" parent="CanvasLayer/Level1" index="9"]
+visible = false
+position = Vector2( 10, 13 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room7" type="Sprite" parent="CanvasLayer/Level1" index="10"]
+visible = false
+position = Vector2( 10, 9 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room7" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room8" type="Sprite" parent="CanvasLayer/Level1" index="11"]
+visible = false
+position = Vector2( 14, 9 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room8" index="0"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room9" type="Sprite" parent="CanvasLayer/Level1" index="12"]
+visible = false
+position = Vector2( 18, 9 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room9" index="0"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room9-2" type="Sprite" parent="CanvasLayer/Level1" index="13"]
+visible = false
+position = Vector2( 18, 5 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room9-2" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room10" type="Sprite" parent="CanvasLayer/Level1" index="14"]
+visible = false
+position = Vector2( 18, 15 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room10" index="0"]
+position = Vector2( 0, -4 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector2" type="Sprite" parent="CanvasLayer/Level1/Room10" index="1"]
+position = Vector2( 0, -3 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector3" type="Sprite" parent="CanvasLayer/Level1/Room10" index="2"]
+position = Vector2( 0, -2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room11" type="Sprite" parent="CanvasLayer/Level1" index="15"]
+visible = false
+position = Vector2( 22, 9 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room11" index="0"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room12" type="Sprite" parent="CanvasLayer/Level1" index="16"]
+visible = false
+position = Vector2( 26, 9 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room12" index="0"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room13" type="Sprite" parent="CanvasLayer/Level1" index="17"]
+visible = false
+position = Vector2( 22, 19 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room13" index="0"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room14" type="Sprite" parent="CanvasLayer/Level1" index="18"]
+visible = false
+position = Vector2( 22, 15 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room14" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room14-Cell" type="Sprite" parent="CanvasLayer/Level1" index="19"]
+visible = false
+position = Vector2( 22, 13 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room15" type="Sprite" parent="CanvasLayer/Level1" index="20"]
+visible = false
+position = Vector2( 26, 15 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room15" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room15-Cell" type="Sprite" parent="CanvasLayer/Level1" index="21"]
+visible = false
+position = Vector2( 26, 13 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room16" type="Sprite" parent="CanvasLayer/Level1" index="22"]
+visible = false
+position = Vector2( 26, 19 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room16" index="0"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room17" type="Sprite" parent="CanvasLayer/Level1" index="23"]
+visible = false
+position = Vector2( 30, 19 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room17" index="0"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room18" type="Sprite" parent="CanvasLayer/Level1" index="24"]
+visible = false
+position = Vector2( 10, 5 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room18" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room19" type="Sprite" parent="CanvasLayer/Level1" index="25"]
+visible = false
+position = Vector2( 10, 1 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room19" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room20" type="Sprite" parent="CanvasLayer/Level1" index="26"]
+visible = false
+position = Vector2( 26, 5 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room20" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room21" type="Sprite" parent="CanvasLayer/Level1" index="27"]
+visible = false
+position = Vector2( 22, 5 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room21" index="0"]
+position = Vector2( 2, 0 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room22" type="Sprite" parent="CanvasLayer/Level1" index="28"]
+visible = false
+position = Vector2( 26, 1 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room22" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room23" type="Sprite" parent="CanvasLayer/Level1" index="29"]
+visible = false
+position = Vector2( 22, 1 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Level1/Room23" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Tutorial" type="ColorRect" parent="CanvasLayer" index="1"]
+visible = false
+show_behind_parent = true
+margin_left = 4.0
+margin_top = 5.0
+margin_right = 41.0
+margin_bottom = 35.0
+color = Color( 0.101961, 0.0784314, 0.0745098, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="current_room" type="Sprite" parent="CanvasLayer/Tutorial" index="0"]
+position = Vector2( 18, 27 )
+z_index = 1
+texture = ExtResource( 5 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room0" type="Sprite" parent="CanvasLayer/Tutorial" index="1"]
+position = Vector2( 18, 27 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room1" type="Sprite" parent="CanvasLayer/Tutorial" index="2"]
+visible = false
+position = Vector2( 18, 23 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Tutorial/Room1" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room2" type="Sprite" parent="CanvasLayer/Tutorial" index="3"]
+visible = false
+position = Vector2( 18, 19 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Tutorial/Room2" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room3" type="Sprite" parent="CanvasLayer/Tutorial" index="4"]
+visible = false
+position = Vector2( 18, 15 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Tutorial/Room3" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room4" type="Sprite" parent="CanvasLayer/Tutorial" index="5"]
+visible = false
+position = Vector2( 14, 15 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Tutorial/Room4" index="0"]
+position = Vector2( 2, 0 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room5" type="Sprite" parent="CanvasLayer/Tutorial" index="6"]
+visible = false
+position = Vector2( 22, 15 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Tutorial/Room5" index="0"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room6" type="Sprite" parent="CanvasLayer/Tutorial" index="7"]
+visible = false
+position = Vector2( 18, 11 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector2" type="Sprite" parent="CanvasLayer/Tutorial/Room6" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room7" type="Sprite" parent="CanvasLayer/Tutorial" index="8"]
+visible = false
+position = Vector2( 18, 7 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Tutorial/Room7" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="Room8" type="Sprite" parent="CanvasLayer/Tutorial" index="9"]
+visible = false
+position = Vector2( 18, 3 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.5, 0.5 )
+
+[node name="connector" type="Sprite" parent="CanvasLayer/Tutorial/Room8" index="0"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.5, 0.5 )
