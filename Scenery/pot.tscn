@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Lowrez Dungeoncrawl Assets/Scenery_Pieces/pot.png" type="Texture" id=1]
+
+[node name="pot" type="Sprite"]
+texture = ExtResource( 1 )
