@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bag_full.wav-b99cd338b4678c9507fe99aa9c4b2b37.sample"
+
+[deps]
+
+source_file="res://Lowrez Dungeoncrawl Assets/Sounds/bag_full.wav"
+dest_files=[ "res://.import/bag_full.wav-b99cd338b4678c9507fe99aa9c4b2b37.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

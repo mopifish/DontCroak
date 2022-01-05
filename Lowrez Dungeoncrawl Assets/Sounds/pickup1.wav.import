@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pickup1.wav-f9b10de1b651591dd1d6dff0b161cdd3.sample"
+
+[deps]
+
+source_file="res://Lowrez Dungeoncrawl Assets/Sounds/pickup1.wav"
+dest_files=[ "res://.import/pickup1.wav-f9b10de1b651591dd1d6dff0b161cdd3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

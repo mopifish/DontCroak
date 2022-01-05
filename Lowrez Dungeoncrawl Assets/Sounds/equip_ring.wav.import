@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/equip_ring.wav-91d10e6948fd9f6b7fae4f8e86600235.sample"
+
+[deps]
+
+source_file="res://Lowrez Dungeoncrawl Assets/Sounds/equip_ring.wav"
+dest_files=[ "res://.import/equip_ring.wav-91d10e6948fd9f6b7fae4f8e86600235.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

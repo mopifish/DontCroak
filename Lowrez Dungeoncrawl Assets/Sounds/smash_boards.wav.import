@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/smash_boards.wav-10b10f4f30120df0197bce4a9961e044.sample"
+
+[deps]
+
+source_file="res://Lowrez Dungeoncrawl Assets/Sounds/smash_boards.wav"
+dest_files=[ "res://.import/smash_boards.wav-10b10f4f30120df0197bce4a9961e044.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

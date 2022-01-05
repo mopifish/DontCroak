@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/monster_dying.wav-d12222d6a512a2a763efbdf2f55dfee5.sample"
+
+[deps]
+
+source_file="res://Lowrez Dungeoncrawl Assets/Sounds/monster_dying.wav"
+dest_files=[ "res://.import/monster_dying.wav-d12222d6a512a2a763efbdf2f55dfee5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
